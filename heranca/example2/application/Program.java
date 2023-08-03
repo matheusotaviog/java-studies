@@ -32,6 +32,17 @@ public class Program {
             System.out.println("Balance after update = " + sacc.getBalance());
         }
 
+        Account acc4 = new Account(101, "Alex", 1000.0);
+        acc4.withdraw(200.0);
+        System.out.println(acc4.getBalance());
+
+        SavingsAccount sacc2 = new SavingsAccount(102, "Alex2", 1000.0, 0.01);
+        sacc2.withdraw(200.0);
+        System.out.println(sacc2.getBalance());
+
+        BusinessAccount bacc5 = new BusinessAccount(104, "Ana", 1000.0, 500.0);
+        bacc5.withdraw(200.0);
+        System.out.println(bacc5.getBalance());
     }
 
 }
