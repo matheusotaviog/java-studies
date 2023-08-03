@@ -3,6 +3,7 @@ package heranca.example2.application;
 import heranca.example2.entities.Account;
 import heranca.example2.entities.BusinessAccount;
 import heranca.example2.entities.SavingsAccount;
+import org.w3c.dom.ls.LSOutput;
 
 public class Program {
 
@@ -43,6 +44,20 @@ public class Program {
         BusinessAccount bacc5 = new BusinessAccount(104, "Ana", 1000.0, 500.0);
         bacc5.withdraw(200.0);
         System.out.println(bacc5.getBalance());
+
+
+        //POLIMORFISMO
+
+        Account x = new Account(50, "Cleber", 300.00);
+        Account y = new SavingsAccount(51, "Luiza", 300.00, 0.02);
+
+        x.withdraw(50.0);
+        y.withdraw(50.0);
+
+        System.out.println("\n POLIMORFISM: ");
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
+
     }
 
 }
